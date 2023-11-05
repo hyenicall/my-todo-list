@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  },
+  "extends": ["airbnb-typescript", "prettier", "plugin:jest/recommended"],
+  "plugins": ["import"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "class-methods-use-this": "off",
+    "react/jsx-one-expression-per-line": 1,
+    "no-control-regex": 0,
+    "@typescript-eslint/indent": 0,
+    "react/static-property-placement": "error",
+    "@typescript-eslint/no-unused-vars": 1,
+    "react/no-unused-prop-types": 1
+  },
+  "globals": {
+    "document": "readonly",
+    "JSX": "readonly"
+  }
+}
